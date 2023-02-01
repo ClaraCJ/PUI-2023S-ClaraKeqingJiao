@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    height: 310px;
+    width: 100%;
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+.header img {
+    height: 310px;
+    width: 400px;
+    position: absolute;
+    left: 30px;
+}
+
+.nav {
+    height: 95px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_product a,
+.nav_cart a {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.nav_product a:hover,
+.nav_cart a {
+    background-color: yellow;
+    font-weight: 600;
+}
+
+.cart {
+    margin: 100px auto;
+    font-size: 36px;
+    text-align: center;
+}
+
+.item1 {
+    width: 500px;
+    margin: 0 auto;
+    /* background-color: palegoldenrod; */
+}
+
+.item1 .img {
+    width: 115px;
+    height: 115px;
+    border: 3px solid black;
+    margin: 0 auto;
+    background: url(../products/original-cinnamon-roll.jpg) no-repeat;
+    background-size: contain;
+}
+
+.item1 a {
+    font-size: 12px;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.item1 span {
+    font-size: 24px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item1 .price {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item2 {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.item2 .img {
+    width: 115px;
+    height: 115px;
+    border: 3px solid black;
+    margin: 0 auto;
+    background: url(../products/double-chocolate-cinnamon-roll.jpg) no-repeat;
+    background-size: contain;
+}
+
+.item2 a {
+    font-size: 12px;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.item2 span {
+    font-size: 24px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item2 .price {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.division {
+    width: 740px;
+    border-top: 5px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.total {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    width: 175px;
+    height: 50px;
+    display: block;
+    font-size: 24px;
+    background-color: yellow;
+    border: 3px solid black;
+    margin: 20px auto;
+    cursor: pointer;
+}

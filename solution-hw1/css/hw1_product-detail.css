@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    height: 310px;
+    width: 100%;
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+.header img {
+    height: 310px;
+    width: 400px;
+    position: absolute;
+    left: 30px;
+}
+
+.nav {
+    height: 95px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_product a,
+.nav_cart a {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.nav_product a,
+.nav_cart a:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+
+.rolls {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rolls p {
+    font-size: 36px;
+    text-align: center;
+}
+
+.rolls img {
+    width: 626px;
+    height: 626px;
+    border: 3px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.rolls h1 {
+    font-size: 24px;
+    font-weight: 300;
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.glazing,
+.size {
+    font-size: 24px;
+    font-weight: 300;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.glazing {
+    margin-top: 75px;
+}
+
+.glazing select,
+.size select {
+    width: 320px;
+    height: 50px;
+    border: 3px solid black;
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 300;
+    padding-left: 20px;
+    cursor: pointer;
+    /* clear the arrow style */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /* add an customized arrow */
+    background: url("../logo/arrow.png")273px no-repeat;
+}
+
+.size {
+    margin-top: 45px;
+}
+
+
+.price {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.price span {
+    margin-right: 30px;
+    font-size: 24px;
+}
+
+.price button {
+    width: 195px;
+    height: 50px;
+    border: 3px solid black;
+    background-color: yellow;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

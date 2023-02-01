@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    height: 310px;
+    width: 100%;
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+.header img {
+    height: 310px;
+    width: 400px;
+    position: absolute;
+    left: 30px;
+}
+
+.nav {
+    height: 95px;
+    margin: 0 auto;
+    /* background-color: palegoldenrod; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_product a,
+.nav_cart a {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.nav_product a,
+.nav_cart a:hover {
+    background-color: yellow;
+    font-weight: 600;
+}
+
+.rolls {
+    margin: 100px auto;
+}
+
+.rolls>p {
+    font-size: 36px;
+    text-align: center;
+}
+
+.rolls .products {
+    width: 284px;
+    height: auto;
+    margin: 55px auto;
+    padding: 5px;
+}
+
+.rolls .products:hover {
+    background-color: yellow;
+}
+
+.rolls .products img {
+    width: 278px;
+    height: 278px;
+    border: 3px solid black;
+    margin-bottom: 15px;
+}
+
+.rolls .products a {
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+.rolls .products p {
+    font-size: 24px;
+    font-weight: 300;
+}
