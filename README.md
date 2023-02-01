@@ -1,7 +1,7 @@
 # PUI homework
 
-Deployed website: https://claracj.github.io/teach-PUI-2023S-example/index.html
+Deployed website: https://claracj.github.io/PUI-2023S-ClaraKeqingJiao/index.html
 
-Repository link: https://github.com/ClaraCJ/teach-PUI-2023S-example
+Repository link: https://github.com/ClaraCJ/PUI-2023S-ClaraKeqingJiao
 
 
