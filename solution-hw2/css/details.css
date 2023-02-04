@@ -157,7 +157,7 @@ section {
     -moz-appearance: none;
     -webkit-appearance: none;
     /* add an customized arrow to make the list looks better*/
-    background: url("../../solution-hw1/logo/arrow.png")273px no-repeat;
+    background: url("logo/arrow.png")273px no-repeat;
 }
 
 .size {
