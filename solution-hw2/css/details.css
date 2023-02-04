@@ -25,7 +25,7 @@ header {
 .logo {
     height: 100%;
     width: 450px;
-    background: url(logo/logo-01.svg) no-repeat;
+    background: url(../logo/logo-01.svg);
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -156,8 +156,8 @@ section {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    /* add an customized arrow to make the list looks better*/
-    background: url("logo/arrow.png")273px no-repeat;
+    /* add a customized arrow to make the list looks better*/
+    background: url("../logo/arrow.png")273px no-repeat;
 }
 
 .size {
