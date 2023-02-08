@@ -24,10 +24,12 @@ header {
 .logo {
     height: 100%;
     width: 450px;
-    background: url(../logo/logo-01.svg) no-repeat;
-    margin-left: 20px;
     margin-right: 20px;
     display: flex;
+}
+
+.logo img {
+    height: 95%;
 }
 
 .right {
