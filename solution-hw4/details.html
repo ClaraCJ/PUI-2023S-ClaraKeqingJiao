@@ -28,7 +28,7 @@
 	<section>
 		<!-- Left part: Big Image -->
 		<div class="left">
-			<img src="products/original-cinnamon-roll.jpg" alt="">
+			<img src="products/original-cinnamon-roll.jpg" alt="" class="infoimage">
 		</div>
 
 
@@ -40,12 +40,12 @@
 
 			<div class="glazing">Glazing:
 				<form action="#">
-					<select id="glazingOptions" onchange="updatePrice()"></select>
+					<select id="glazing-options" onchange="updatePrice()"></select>
 				</form>
 			</div>
 			<div class="size">Size:
 				<form action="#">
-					<select id="packOptions" onchange="updatePrice()"></select>
+					<select id="pack-size" onchange="updatePrice()"></select>
 				</form>
 			</div>
 			<div class="price">
@@ -54,7 +54,8 @@
 			</div>
 		</div>
 	</section>
-	<script type="text/javascript" src="checkout.js"></script>
+	<script type="text/javascript" src="js/rollsData.js"></script>
+	<script type="text/javascript" src="js/checkout.js"></script>
 
 </body>
 
