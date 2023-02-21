@@ -82,7 +82,7 @@ packOption.addEventListener('change', updatePrice)
 
 // // Update the header text
 const headerElement = document.querySelector('.title');
-headerElement.innerHTML = chosenRolls + 'Cinnamon Roll';
+headerElement.innerHTML = chosenRolls + '&nbsp' + 'Cinnamon Roll';
 
 // Update the image
 const rollImage = document.querySelector('.infoimage');
@@ -108,3 +108,4 @@ function addToCart() {
     cart.push(addedRoll);
     console.log(cart);
 }
+addToCart();
