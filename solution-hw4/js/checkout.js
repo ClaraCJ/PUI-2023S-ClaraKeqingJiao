@@ -86,7 +86,7 @@ headerElement.innerHTML = chosenRolls + 'Cinnamon Roll';
 
 // Update the image
 const rollImage = document.querySelector('.infoimage');
-rollImage.src = '../products/' + rolls[chosenRolls].imageFile;
+rollImage.src = 'products/' + rolls[chosenRolls].imageFile;
 rollImage.alt = chosenRolls + ' Cinnamon Roll';
 
 // Update the price
