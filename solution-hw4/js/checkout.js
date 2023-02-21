@@ -43,14 +43,14 @@ for (var i = 0; i <= 3; i++) {
     option.innerText = obj1[i]
 }
 
-// // update the detail page links
+// update the detail page links
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const chosenRolls = params.get('rolls');
 
 const basePrice = rolls[chosenRolls].basePrice;
 
-// // // update the final total price
+// update the final total price
 function updatePrice() {
     // obtain selected items' index
     var index = glazingOptions.selectedIndex;
@@ -80,7 +80,7 @@ let packOption = document.querySelector('#pack-size');
 packOption.addEventListener('change', updatePrice)
 
 
-// // Update the header text
+// Update the header text
 const headerElement = document.querySelector('.title');
 headerElement.innerHTML = chosenRolls + '&nbsp' + 'Cinnamon Roll';
 
@@ -88,10 +88,6 @@ headerElement.innerHTML = chosenRolls + '&nbsp' + 'Cinnamon Roll';
 const rollImage = document.querySelector('.infoimage');
 rollImage.src = 'products/' + rolls[chosenRolls].imageFile;
 rollImage.alt = chosenRolls + ' Cinnamon Roll';
-
-// Update the price
-const total = document.querySelector('.checkoutPrice');
-total.innerText = '$' + rolls[chosenRolls].basePrice;
 
 // Add to cart action
 const cart = [];
