@@ -89,9 +89,10 @@ const rollImage = document.querySelector('.infoimage');
 rollImage.src = 'products/' + rolls[chosenRolls].imageFile;
 rollImage.alt = chosenRolls + ' Cinnamon Roll';
 
-// Add to cart action
+// Add to cart
 const cart = [];
 
+// Alert and console.log cart When the user clicks on “Add to Cart" 
 const addToCartButton = document.querySelector('button');
 addToCartButton.addEventListener('click', () => {
     alert('Added to cart!');

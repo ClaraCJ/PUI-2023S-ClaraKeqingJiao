@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/details.css">
+	<title>Bun Bun Bake Shop</title>
+</head>
+
+<body>
+	<!-- Header: With Logo and Navigation Bar!!!!!! -->
+	<header>
+		<div class="logo"><a href="gallery.html"><img src="../solution-hw1/logo/logo-01.svg" alt=""></a></div>
+		<div class="right">
+			<div class="nav">
+				<span><a href="gallery.html">PRODUCTS</a></span>
+				<span><a href="cart.html">CART</a></span>
+			</div>
+
+			<div class="division"></div>
+			<div class="title">Our hand-made cinnamon rolls</div>
+		</div>
+	</header>
+
+	<!-- Main Section of Product Details -->
+	<section>
+		<!-- Left part: Big Image -->
+		<div class="left">
+			<img src="products/original-cinnamon-roll.jpg" alt="" class="infoimage">
+		</div>
+
+
+		<!-- Right part: Viewing Products' Details before adding them to the shopping cart! -->
+		<div class="cart-detail">
+
+			<!-- A piece of text at the top -->
+			<h1>Customize our delicious, <br>hand-made cinammon roll to your hiking!</h1>
+
+			<div class="glazing">Glazing:
+				<form action="#">
+					<select id="glazing-options" onchange="updatePrice()"></select>
+				</form>
+			</div>
+			<div class="size">Size:
+				<form action="#">
+					<select id="pack-size" onchange="updatePrice()"></select>
+				</form>
+			</div>
+			<div class="price">
+				<span id="checkoutPrice"></span>
+				<button>Add to Cart</button>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/rollsData.js"></script>
+	<script type="text/javascript" src="js/checkout.js"></script>
+
+</body>
+
+</html>
