@@ -7,6 +7,20 @@ class Roll {
     }
 }
 
+// update the detail page links
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const chosenRolls = params.get('rolls');
+const basePrice = rolls[chosenRolls]?.basePrice ?? 0;
+
+//update detail page based on parameter
+const rollHeaderText = document.querySelector('.title');
+rollHeaderText.innerHTML = chosenRolls + ' Cinnamon Roll';
+console.log(chosenRolls);
+
+const rollImage = document.querySelector('.infoimage');
+rollImage.src = './products/' + rolls[chosenRolls]['imageFile'];
+
 var glazingOptions = document.getElementById("glazing-options");
 var packOptions = document.getElementById("pack-size");
 // glazing dropdown menu content
@@ -45,18 +59,7 @@ for (var i = 0; i <= 3; i++) {
     option.innerText = obj1[i];
 }
 
-// update the detail page links
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const chosenRolls = params.get('rolls');
-
-if (!rolls.hasOwnProperty(chosenRolls)) {
-    console.error(`Invalid roll type: ${chosenRolls}`);
-}
-
-const basePrice = rolls[chosenRolls]?.basePrice ?? 0;
-
-// update the final total price
+//calculate and update prices
 function updatePrice() {
     // obtain selected items' index
     var index = glazingOptions.selectedIndex;
@@ -76,53 +79,44 @@ function updatePrice() {
 // initialize price
 updatePrice();
 
-// change glazing event
-let glazingOption = document.querySelector('#glazing-options');
-glazingOption.addEventListener('change', updatePrice);
+let cart = [];
+//add item to cart
+const addToCartButton = document.querySelector('button');
+addToCartButton.addEventListener('click', addItemToCart);
 
-
-// change pack size event
-let packOption = document.querySelector('#pack-size');
-packOption.addEventListener('change', updatePrice)
-
-
-// Update the header text
-const headerElement = document.querySelector('.title');
-headerElement.innerHTML = chosenRolls + '&nbsp' + 'Cinnamon Roll';
-
-// Update the image
-const rollImage = document.querySelector('.infoimage');
-if (rolls.hasOwnProperty(chosenRolls)) {
-    rollImage.src = 'products/' + rolls[chosenRolls].imageFile;
-    rollImage.alt = chosenRolls + ' Cinnamon Roll';
-} else {
-    console.error(`Invalid roll type: ${chosenRolls}`);
-}
-
-// load cart from local storage or create an empty one (HW6)
-let cart = JSON.parse(localStorage.getItem("storedRolls")) || [];
-
-// Alert and console.log cart When the user clicks on “Add to Cart" 
-const addToCartButton = document.querySelector("button");
-addToCartButton.addEventListener("click", () => {
-    addToCart();
-    alert('Added to cart!');
-    //print the items that were added to the cart
-    console.log(cart[cart.length - 1]);
-});
-
-function addToCart() {
+function addItemToCart() {
     const rollGlazing = glazingOptions.options[glazingOptions.selectedIndex].text;
     const packSize = packOptions.options[packOptions.selectedIndex].text;
-    const addedRoll = new Roll(chosenRolls, rollGlazing, packSize, basePrice);
+    const addedRoll = new Roll(chosenRolls, rollGlazing, packSize, basePrice)
     cart.push(addedRoll);
-
-    //save to local storage (HW6 Updated)
     saveToLocalStorage();
+    alert('Added to cart!');
 }
 
+//save to local storage
 function saveToLocalStorage() {
-    const rollArrayString = JSON.stringify(cart);
-    localStorage.setItem("storedRolls", rollArrayString);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    const cartString = JSON.stringify(cart);
+    localStorage.setItem('storedCart', cartString);
+    console.log('saved:' + localStorage.getItem('storedCart'));
+}
+
+//retrieve from local storage
+function retrieveFromLocalStorage() {
+    const cartString = localStorage.getItem('storedCart');
+    const cartArray = JSON.parse(cartString);
+    for (const cartItem of cartArray) {
+        const newItem = new Roll(
+            cartItem.type,
+            cartItem.glazing,
+            Number(cartItem.size),
+            Number(cartItem.basePrice)
+        )
+        console.log('retrieved:' + newItem);
+        cart.push(newItem);
+    }
+}
+
+
+if (localStorage.getItem('storedCart') != null) {
+    retrieveFromLocalStorage();
 }

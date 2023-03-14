@@ -1,129 +1,138 @@
+//initialize with an empty array
+let cart = [];
+
 // Define the Roll class
 class Roll {
-    constructor(type, glazing, packSize, calculatedPrice) {
+    constructor(type, glazing, packSize, basePrice) {
         this.type = type;
         this.glazing = glazing;
         this.packSize = packSize;
-        this.calculatedPrice = calculatedPrice;
-
-        this.element = null;
-    }
-
-    get price() {
-        let total = this.calculatedPrice;
-        return total.toFixed(2);
+        this.basePrice = basePrice;
     }
 }
 
-// Retrieve data from storage (HW6 Updated)
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
+//define the glazings and packSize objects
+const glazings = {
+    "none": 0,
+    "sugar-milk": 0.5,
+    "vanilla-milk": 0.5,
+    "double-chocolate": 1
+};
 
-// Update the cart using the storage
-function populateCart() {
-    const cartItemsContainer = document.getElementById('cart-items-container');
-    cartItemsContainer.innerHTML = '';
+const packSize = {
+    "1-pack": 1,
+    "3-pack": 3,
+    "6-pack": 5,
+    "12-pack": 10
+};
 
-    if (cart.length === 0) {
-        const emptyCartMessage = document.createElement('p');
-        emptyCartMessage.textContent = 'Your cart is empty';
-        cartItemsContainer.appendChild(emptyCartMessage);
-        return;
+//retrieve from local storage
+if (localStorage.getItem("storedCart") != null) {
+    retrieveFromLocalStorage();
+}
+console.log(cart);
+
+//retrieve from local storage
+function retrieveFromLocalStorage() {
+    const cartString = localStorage.getItem("storedCart");
+    const cartArray = JSON.parse(cartString);
+    for (const cartItem of cartArray) {
+        const newItem = new Roll(
+            cartItem.type,
+            cartItem.glazing,
+            Number(cartItem.size),
+            Number(cartItem.basePrice)
+        );
+        console.log("retrieved:" + newItem);
+        cart.push(newItem);
     }
 }
 
-// Update the total checkout price in the cart
-function updateCheckOutPrice() {
-    let checkOutPrice = 0;
-    for (const rollCart of rollSet) {
-        checkOutPrice = checkOutPrice + Number(calculatePrice(rollCart));
-    }
-    const totalPrice = document.querySelector('#total-price');
-    totalPrice.innerText = '$ ' + checkOutPrice;
+//save to local storage
+function saveToLocalStorage() {
+    const cartString = JSON.stringify(cart);
+    localStorage.setItem("storedCart", cartString);
+    console.log("saved:" + localStorage.getItem("storedCart"));
 }
 
-// Get the template element
-const template = document.querySelector('.list-template');
+//display cart items
+repopulateCart();
 
-// Get the shopping cart container element
-const cartContainer = document.querySelector('.checkout');
+function repopulateCart() {
+    const cartContainerElement = document.querySelector(".item_container");
+    if (cartContainerElement) {
+        cartContainerElement.innerHTML = '';
+        for (let i = 0; i < cart.length; i++) {
+            createCartItem(cart[i], i);
+        }
+        updateTotalPrice();
+    }
+}
 
-// Calculate the total cost
-function calculateTotal() {
-    let total = 0;
+//create cart item
+function createCartItem(item, index) {
+    //clone the template
+    const template = document.querySelector(".list-template");
+    const clone = template.content.cloneNode(true);
+    item.element = clone.querySelector(".item");
 
-    cartItems.forEach((item) => {
-        total += parseFloat(item.price);
+    //add interaction to remove button
+    const removeButton = clone.querySelector(".remove");
+    removeButton.dataset.index = index;
+    removeButton.addEventListener("click", (event) => {
+        const itemIndex = event.target.dataset.index;
+        deleteCartItem(cart[itemIndex], itemIndex);
+        saveToLocalStorage();
     });
 
-    return total.toFixed(2);
+    //update cart item details
+    updateCartItem(item, clone);
+
+    //prepend to parent element
+    cartContainerElement.append(clone);
 }
 
-// Update the total cost in the HTML
-function updateTotal() {
-    const totalElement = document.querySelector('.total');
-    totalElement.textContent = '$ ' + calculateTotal();
+//update cart item details
+function updateCartItem(item, newItem) {
+    const rollTypeElement = newItem.querySelector("#rollType");
+    rollTypeElement.textContent = item.type;
+
+    const glazingTypeElement = newItem.querySelector("#glazingType");
+    glazingTypeElement.textContent = "Glazing: " + item.glazing;
+
+    const packSizeElement = newItem.querySelector("#packSize");
+    packSizeElement.textContent = "Pack Size: " + item.packSize;
+
+    const priceElement = newItem.querySelector(".price");
+    priceElement.textContent = "$ " + calculateTotal(item);
+
+    const packImg = newItem.querySelector(".rollImage");
+    packImg.src = `products/${item.type}-${item.glazing}-cinnamon-roll.jpg`;
 }
 
-// Remove an item from the cart
-function removeItem(event) {
-    const itemIndex = event.target.dataset.index;
-    cartItems.splice(itemIndex, 1);
-    updateCart();
+// Calculate the total cost for a single item
+function calculateTotal(item) {
+    let total = (item.basePrice + glazings[item.glazing]) * packSize[item.packSize];
+    let total_rounded = total.toFixed(2);
+    return total_rounded;
 }
 
-// Create a new cart item from the form data
-function addItem(type, glazing, packSize, calculatedPrice, imgSrc) {
-    const newItem = new Roll(type, glazing, packSize, calculatedPrice);
-
-    newItem.imgSrc = imgSrc;
-
-    cartItems.push(newItem);
-
-    updateCart();
+//update total price
+function updateTotalPrice() {
+    let totalPrice = 0;
+    for (let i = 0; i < cart.length; i++) {
+        itemPrice = calculateTotal(cart[i]);
+        totalPrice = Number(itemPrice) + Number(totalPrice);
+        totalPrice = totalPrice.toFixed(2);
+    }
+    totalPriceElement = document.querySelector(".total");
+    totalPriceElement.innerHTML = "$" + totalPrice;
 }
 
-// Update the cart in the HTML
-function updateCart() {
-    cartContainer.innerHTML = '';
-
-    cartItems.forEach((item, index) => {
-        // Clone the template element
-        const newItem = template.content.cloneNode(true);
-
-        // Update the item details
-        const rollTypeElement = newItem.querySelector('#rollType');
-        rollTypeElement.textContent = item.type;
-
-        const glazingTypeElement = newItem.querySelector('#glazingType');
-        glazingTypeElement.textContent = 'Glazing: ' + item.glazing;
-
-        const packSizeElement = newItem.querySelector('#packSize');
-        packSizeElement.textContent = 'Pack Size: ' + item.packSize;
-
-        const priceElement = newItem.querySelector('.price');
-        priceElement.textContent = '$ ' + item.price;
-
-        const packImg = newItem.querySelector('.rollImage');
-        packImg.src = `products/${item.imgSrc}-cinnamon-roll.jpg`;
-
-        // Add a remove button and event
-
-
-        // Add a remove button and event listener
-        const removeButton = newItem.querySelector('.remove');
-        removeButton.dataset.index = index;
-        removeButton.addEventListener('click', removeItem);
-
-        // Append the new item to the shopping cart
-        cart.appendChild(newItem);
-    });
-
-    // Update the total cost
-    updateTotal();
+function deleteCartItem(item, index) {
+    cart.splice(index, 1);
+    item.element.remove();
+    updateTotalPrice();
+    console.log(cart);
+    repopulateCart();
 }
-
-// Add event listener to the checkout button
-const checkoutButton = document.querySelector('button');
-checkoutButton.addEventListener('click', () => {
-    alert('You have checked out successfully!');
-});
