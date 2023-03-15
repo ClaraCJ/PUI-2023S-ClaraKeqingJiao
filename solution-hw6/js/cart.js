@@ -115,6 +115,7 @@ function updateCartItem(item, element) {
 
     const packImg = element.querySelector(".rollImage");
     packImg.src = `products/${item.type}-cinnamon-roll.jpg`;
+    //image can be displayed on my laptop, but not on the published website, I have no idea why...
 
     let itemPrice = 0;
     itemPrice = calculateTotal(item);
