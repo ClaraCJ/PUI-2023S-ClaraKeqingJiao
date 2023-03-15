@@ -24,7 +24,7 @@ rollImage.src = './products/' + rolls[chosenRolls]['imageFile'];
 var glazingOptions = document.getElementById("glazing-options");
 var packOptions = document.getElementById("pack-size");
 // glazing dropdown menu content
-var obj = {
+const obj = {
     0: 'Keep Original',
     1: 'Sugar milk',
     2: 'Vanilla milk',
@@ -32,7 +32,7 @@ var obj = {
 }
 
 // pack size dropdown menu content
-var obj1 = {
+const obj1 = {
     0: 1,
     1: 3,
     2: 6,
@@ -40,7 +40,7 @@ var obj1 = {
 }
 
 // price dropdown menu content
-var obj3 = {
+const obj3 = {
     0: 0,
     1: 0,
     2: 0.5,
@@ -73,6 +73,9 @@ function updatePrice() {
         packSize = 10;
     }
     var sum = (parseFloat(basePrice) + glazingPrice) * packSize;
+    console.log(glazingPrice);
+    console.log(packSize);
+    console.log(sum);
     document.getElementById("checkoutPrice").innerText = "$" + sum.toFixed(2);
 }
 
@@ -115,7 +118,6 @@ function retrieveFromLocalStorage() {
         cart.push(newItem);
     }
 }
-
 
 if (localStorage.getItem('storedCart') != null) {
     retrieveFromLocalStorage();

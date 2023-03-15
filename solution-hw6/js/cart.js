@@ -3,27 +3,27 @@ let cart = [];
 
 // Define the Roll class
 class Roll {
-    constructor(type, glazing, packSize, basePrice) {
-        this.type = type;
-        this.glazing = glazing;
-        this.packSize = packSize;
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
         this.basePrice = basePrice;
     }
 }
 
 //define the glazings and packSize objects
 const glazings = {
-    "none": 0,
-    "sugar-milk": 0.5,
-    "vanilla-milk": 0.5,
-    "double-chocolate": 1
+    'Keep Original': 0,
+    'Sugar milk': 0,
+    'Vanilla milk': 0.5,
+    'Double chocolate': 1.5
 };
 
-const packSize = {
-    "1-pack": 1,
-    "3-pack": 3,
-    "6-pack": 5,
-    "12-pack": 10
+const size = {
+    '1': 1,
+    '3': 3,
+    '6': 5,
+    '12': 10
 };
 
 //retrieve from local storage
@@ -43,7 +43,7 @@ function retrieveFromLocalStorage() {
             Number(cartItem.size),
             Number(cartItem.basePrice)
         );
-        console.log("retrieved:" + newItem);
+        // console.log("retrieved:" + newItem);
         cart.push(newItem);
     }
 }
@@ -52,14 +52,15 @@ function retrieveFromLocalStorage() {
 function saveToLocalStorage() {
     const cartString = JSON.stringify(cart);
     localStorage.setItem("storedCart", cartString);
-    console.log("saved:" + localStorage.getItem("storedCart"));
+    // console.log("saved:" + localStorage.getItem("storedCart"));
 }
 
 //display cart items
 repopulateCart();
 
 function repopulateCart() {
-    const cartContainerElement = document.querySelector(".item_container");
+    // console.log("repopulating cart");
+    const cartContainerElement = document.querySelector(".item-container");
     if (cartContainerElement) {
         cartContainerElement.innerHTML = '';
         for (let i = 0; i < cart.length; i++) {
@@ -71,6 +72,7 @@ function repopulateCart() {
 
 //create cart item
 function createCartItem(item, index) {
+    // console.log("Creating cart item: ", item, "idx: ", index)
     //clone the template
     const template = document.querySelector(".list-template");
     const clone = template.content.cloneNode(true);
@@ -89,31 +91,45 @@ function createCartItem(item, index) {
     updateCartItem(item, clone);
 
     //prepend to parent element
+    const cartContainerElement = document.querySelector(".item-container");
     cartContainerElement.append(clone);
 }
 
 //update cart item details
-function updateCartItem(item, newItem) {
-    const rollTypeElement = newItem.querySelector("#rollType");
+function updateCartItem(item, element) {
+    const rollTypeElement = element.querySelector("#rollType");
     rollTypeElement.textContent = item.type;
+    // console.log(item.type);
 
-    const glazingTypeElement = newItem.querySelector("#glazingType");
+    const glazingTypeElement = element.querySelector("#glazingType");
     glazingTypeElement.textContent = "Glazing: " + item.glazing;
+    // console.log(item.glazing);
 
-    const packSizeElement = newItem.querySelector("#packSize");
-    packSizeElement.textContent = "Pack Size: " + item.packSize;
+    const packSizeElement = element.querySelector("#packSize");
+    packSizeElement.textContent = "Pack Size: " + item.size;
+    // console.log(item.size);
 
-    const priceElement = newItem.querySelector(".price");
-    priceElement.textContent = "$ " + calculateTotal(item);
+    let productPrice = element.querySelector(".price"); // Define totalPrice variable
+    productPrice.textContent = "$ " + calculateTotal(item);
+    // console.log(productPrice.textContent);
 
-    const packImg = newItem.querySelector(".rollImage");
-    packImg.src = `products/${item.type}-${item.glazing}-cinnamon-roll.jpg`;
+    const packImg = element.querySelector(".rollImage");
+    packImg.src = `products/${item.type}-cinnamon-roll.jpg`;
+
+    let itemPrice = 0;
+    itemPrice = calculateTotal(item);
+    productPrice.innerHTML = '$' + String(itemPrice);
+    // console.log(itemPrice);
 }
 
 // Calculate the total cost for a single item
 function calculateTotal(item) {
-    let total = (item.basePrice + glazings[item.glazing]) * packSize[item.packSize];
+    let total = (item.basePrice + glazings[item.glazing]) * size[item.size];
     let total_rounded = total.toFixed(2);
+    console.log(item.basePrice);
+    console.log(glazings[item.glazing]);
+    console.log(size[item.size]);
+    console.log(total_rounded);
     return total_rounded;
 }
 
