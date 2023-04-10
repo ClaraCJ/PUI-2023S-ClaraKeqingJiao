@@ -7,14 +7,27 @@ let springPic4 = document.querySelector('.spring-pic-4');
 for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].addEventListener('mouseover', function () {
         let bubbleId = this.id;
-        let num1 = i + 1;
-        let num2 = i + 2;
-        let num3 = i + 3;
-        let num4 = i + 4;
-        springPic1.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + num1 + '.png)';
-        springPic2.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + num2 + '.png)';
-        springPic3.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + num3 + '.png)';
-        springPic4.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + num4 + '.png)';
+        springPic1.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 1 + '.png)';
+        console.log(springPic1.style.backgroundImage);
+        springPic2.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 2 + '.png)';
+        console.log(springPic2.style.backgroundImage);
+        springPic3.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 3 + '.png)';
+        console.log(springPic3.style.backgroundImage);
+        if (bubbleId === 'light_blue') {
+            springPic3.style.width = '380px';
+            springPic3.style.height = '245px';
+            springPic4.style.display = 'none';
+            springPic3.style.position = 'absolute';
+            springPic3.style.top = '555px';
+            springPic3.style.right = '0px';
+        } else if (springPic3.style.position === 'absolute') {
+            springPic3.style.width = '';
+            springPic3.style.height = '';
+            springPic4.style.display = '';
+            springPic3.style.position = '';
+            springPic3.style.top = '';
+            springPic3.style.right = '';
+        }
 
         for (let j = 0; j < bubbles.length; j++) {
             let bubble = bubbles[j];
@@ -25,6 +38,9 @@ for (let i = 0; i < bubbles.length; i++) {
             bubble.style.borderRadius = size.width / 2 + 'px';
             bubble.style.transform = 'translate(' + size.translateX + 'px, ' + size.translateY + 'px)';
         }
+    });
+    bubbles[i].addEventListener('mouseout', function () {
+        springPic4.style.display = '';
     });
 }
 
@@ -45,4 +61,3 @@ function getBubbleSize(id, hoveredId) {
             return { width: 0, height: 0 };
     }
 }
-
