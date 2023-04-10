@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #5c1715;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* -------------------------- Header -------------------------- */
+header {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo-large {
+    font-size: 64px;
+    margin-left: 60px;
+    margin-top: 4px;
+}
+
+.logo-large img {
+    width: 82px;
+    height: 26px;
+}
+
+.menu {
+    margin-top: 36px;
+    margin-right: 60px;
+}
+
+.nav {
+    margin-left: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.nav:hover {
+    color: white;
+}
+
+.about {
+    color: white;
+}
+
+/* -------------------------- Main Body -------------------------- */
+section {
+    position: relative;
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.my-photo {
+    width: 430px;
+    height: 575px;
+    position: absolute;
+    left: 48px;
+    top: 105px;
+    opacity: 0.8;
+    background-color: #fff;
+    background: url(../images/about_green.png);
+    background-size: cover;
+    transition: all 0.5s ease;
+}
+
+.my-personality {
+    width: 700px;
+    position: absolute;
+    right: 90px;
+    top: 225px;
+    font-size: 48px;
+    transition: all 0.5s ease;
+}
+
+
+.my-selfintro {
+    width: 550px;
+    position: absolute;
+    right: 48px;
+    top: 480px;
+    opacity: 0.8;
+}
+
+.my-selfintro p {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5em;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#green {
+    top: 32px;
+    right: 216px;
+    background-color: #A9B285;
+    width: 60px;
+    height: 60px;
+}
+
+#black {
+    top: 67px;
+    right: 130px;
+    background-color: #110303;
+    width: 32px;
+    height: 32px;
+}
+
+#orange {
+    top: 38px;
+    right: 20px;
+    background-color: #cd6f3d;
+    width: 47px;
+    height: 47px;
+}
+
+#pink {
+    top: 140px;
+    right: 200px;
+    background-color: #e4b4b8;
+    width: 40px;
+    height: 40px;
+}
+
+#yellow {
+    top: 140px;
+    right: 80px;
+    background-color: #ffdc9d;
+    width: 26px;
+    height: 26px;
+}
+
+
+/* -------------------------- Footer -------------------------- */
+footer {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: white; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.texts {
+    font-size: 32px;
+    margin-left: 60px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #5c1715; */
+}
+
+.external-links {
+    margin-right: 60px;
+    margin-top: 36px;
+}
+
+.link {
+    margin-left: 16px;
+    /* color: rgba(92, 23, 21, 0.6); */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.link:hover {
+    /* color: #5c1715; */
+    color: white;
+}

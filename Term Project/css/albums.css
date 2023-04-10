@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #5c1715;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------- Header -------------------------- */
+header {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo-large {
+    font-size: 64px;
+    margin-left: 60px;
+    margin-top: 4px;
+}
+
+.menu {
+    margin-top: 36px;
+    margin-right: 60px;
+}
+
+.nav {
+    margin-left: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.nav:hover {
+    color: white;
+}
+
+.albums {
+    color: white;
+}
+
+/* -------------------------- Main Body -------------------------- */
+section {
+    width: 1200px;
+    height: 3600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mark-twain-quotes {
+    width: 387.5px;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    right: 48px;
+    top: 54px;
+    font-size: 24px;
+}
+
+.mark-twain {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- pitts ---------- */
+.pitts {
+    position: absolute;
+    left: 174px;
+    top: 196px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.pitts .img-pitts {
+    width: 370px;
+    height: 360px;
+    background: url(../images/cover_pitts.png) no-repeat;
+    background-size: cover;
+}
+
+.pitts:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+/* ---------- new york city ---------- */
+.nyc {
+    position: absolute;
+    right: 0;
+    top: 483px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.nyc .img-nyc {
+    width: 443px;
+    height: 472px;
+    background: url(../images/cover_nyc.png) no-repeat;
+    background-size: cover;
+}
+
+.nyc:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+/* ---------- Hong Kong ---------- */
+.hk {
+    position: absolute;
+    left: 0;
+    top: 865px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.hk .img-hk {
+    width: 465px;
+    height: 345px;
+    background: url(../images/cover_hk.png) no-repeat;
+    background-size: cover;
+}
+
+.hk:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+/* ---------- Boston ---------- */
+.boston {
+    position: absolute;
+    right: 193px;
+    top: 1317px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.boston .img-boston {
+    width: 350px;
+    height: 400px;
+    background: url(../images/cover_boston.png) no-repeat;
+    background-size: cover;
+}
+
+.boston:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+/* ---------- Barcelona ---------- */
+.barcelona {
+    position: absolute;
+    left: 102px;
+    top: 1847px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.barcelona .img-barcelona {
+    width: 459px;
+    height: 585px;
+    background: url(../images/cover_barcelona.png) no-repeat;
+    background-size: cover;
+}
+
+.barcelona:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+/* ---------- paris ---------- */
+.paris {
+    position: absolute;
+    right: 57px;
+    top: 2350px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.paris .img-paris {
+    width: 386px;
+    height: 504px;
+    background: url(../images/cover_paris.png) no-repeat;
+    background-size: cover;
+}
+
+.paris:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+/* ---------- Italy ---------- */
+.italy {
+    position: absolute;
+    left: 0;
+    top: 2870px;
+    font-size: 32px;
+    opacity: 0.7;
+}
+
+.italy .img-italy {
+    width: 459px;
+    height: 459px;
+    background: url(../images/cover_italy.png) no-repeat;
+    background-size: cover;
+}
+
+.italy:hover {
+    opacity: 1;
+    cursor: pointer;
+    /* can add transition to make the opacity changes smoother! */
+}
+
+.pitts:hover,
+.nyc:hover,
+.hk:hover,
+.boston:hover,
+.barcelona:hover,
+.paris:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+
+
+/* -------------------------- Footer -------------------------- */
+footer {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: white; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.texts {
+    font-size: 48px;
+    margin-left: 60px;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #5c1715; */
+}
+
+.external-links {
+    margin-right: 60px;
+    margin-top: 36px;
+}
+
+.link {
+    margin-left: 16px;
+    /* color: rgba(92, 23, 21, 0.6); */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.link:hover {
+    /* color: #5c1715; */
+    color: white;
+}

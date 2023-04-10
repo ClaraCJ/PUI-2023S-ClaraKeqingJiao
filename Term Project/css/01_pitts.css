@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------- Header -------------------------- */
+header {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #5c1715;
+}
+
+.logo-large {
+    font-size: 64px;
+    margin-left: 60px;
+    margin-top: 4px;
+}
+
+.logo-large img {
+    width: 82px;
+    height: 26px;
+}
+
+.menu {
+    margin-top: 36px;
+    margin-right: 60px;
+}
+
+.nav {
+    margin-left: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.nav:hover {
+    color: white;
+}
+
+/* -------------------------- Main Body -------------------------- */
+
+/* ----- Spring Flower ----- */
+section {
+    position: relative;
+    width: 1200px;
+    height: 1750px;
+    margin: auto;
+}
+
+.title {
+    font-size: 64px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #5c1715;
+}
+
+.spring-pic-1 {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    background: url(../images/pitts_light_pink_1.png);
+    background-size: cover;
+    width: 295px;
+    height: 424px;
+}
+
+.spring-pic-2 {
+    position: absolute;
+    top: 130px;
+    left: 310px;
+    background: url(../images/pitts_light_pink_2.png);
+    background-size: cover;
+    width: 320px;
+    height: 424px;
+}
+
+.spring-pic-3 {
+    position: absolute;
+    top: 440px;
+    right: 287px;
+    background: url(../images/pitts_light_pink_3.png);
+    background-size: cover;
+    width: 270px;
+    height: 359px;
+}
+
+.spring-pic-4 {
+    position: absolute;
+    top: 440px;
+    right: 0;
+    background: url(../images/pitts_light_pink_4.png);
+    background-size: cover;
+    width: 269px;
+    height: 359px;
+}
+
+.spring-texts {
+    position: absolute;
+    width: 585px;
+    top: 565px;
+    left: 20px;
+    color: #5c1715;
+}
+
+.spring-title {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.red-bubble {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #5c1715;
+    border-radius: 10px;
+}
+
+.spring-journal {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#light_pink {
+    position: absolute;
+    top: 138px;
+    right: 275px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #D9B1B7;
+    cursor: pointer;
+}
+
+#dark_blue {
+    position: absolute;
+    top: 192px;
+    right: 192px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #0E3060;
+    cursor: pointer;
+}
+
+#light_purple {
+    position: absolute;
+    top: 140px;
+    right: 77px;
+    width: 55px;
+    height: 55px;
+    border-radius: 28px;
+    background-color: #B5B6CB;
+    cursor: pointer;
+}
+
+#orange {
+    position: absolute;
+    top: 306px;
+    right: 250px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #F1A66F;
+    cursor: pointer;
+}
+
+#light_blue {
+    position: absolute;
+    top: 258px;
+    right: 140px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #D3DADC;
+    cursor: pointer;
+}
+
+/* ----- Shadyside Architecture ----- */
+
+.architecture-pic-1 {
+    position: absolute;
+    top: 1250px;
+    left: 20px;
+    background: url(../images/pitts_dark_red_1.png);
+    background-size: cover;
+    width: 213px;
+    height: 323px;
+}
+
+.architecture-pic-2 {
+    position: absolute;
+    top: 1250px;
+    left: 260px;
+    background: url(../images/pitts_dark_red_2.png);
+    background-size: cover;
+    width: 216px;
+    height: 323px;
+}
+
+.architecture-pic-3 {
+    position: absolute;
+    top: 920px;
+    right: 128px;
+    background: url(../images/pitts_dark_red_3.png);
+    background-size: cover;
+    width: 430px;
+    height: 528px;
+}
+
+.architecture-texts {
+    position: absolute;
+    top: 1455px;
+    right: 30px;
+    width: 530px;
+    color: #5c1715;
+}
+
+.architecture-title {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.architecture-journal {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#inofficensive-blue {
+    position: absolute;
+    top: 1107px;
+    left: 394px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #5872A3;
+    cursor: pointer;
+}
+
+#dark-red {
+    position: absolute;
+    top: 950px;
+    left: 274px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #A57D80;
+    cursor: pointer;
+}
+
+#skyblue {
+    position: absolute;
+    top: 1023px;
+    left: 163px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    background-color: #C5D6EC;
+    cursor: pointer;
+}
+
+#green {
+    position: absolute;
+    top: 1092px;
+    left: 209px;
+    width: 76px;
+    height: 76px;
+    border-radius: 38px;
+    background-color: #9DAF5B;
+    cursor: pointer;
+}
+
+
+
+
+/* -------------------------- Footer -------------------------- */
+footer {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: white; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #5c1715;
+}
+
+.texts {
+    font-size: 48px;
+    margin-left: 60px;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #5c1715; */
+}
+
+.external-links {
+    margin-right: 60px;
+    margin-top: 36px;
+}
+
+.link {
+    margin-left: 16px;
+    /* color: rgba(92, 23, 21, 0.6); */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.link:hover {
+    /* color: #5c1715; */
+    color: white;
+}
