@@ -107,6 +107,14 @@ section {
     height: 359px;
 }
 
+.spring-pic-1,
+.spring-pic-2,
+.spring-pic-3,
+.spring-pic-4 {
+    transition: all 0.5s ease;
+}
+
+
 .spring-texts {
     position: absolute;
     width: 585px;
@@ -176,7 +184,7 @@ section {
     width: 30px;
     height: 30px;
     border-radius: 15px;
-    background-color: #F1A66F;
+    background-color: #C08673;
     cursor: pointer;
 }
 
@@ -246,11 +254,11 @@ section {
 
 #navyblue {
     position: absolute;
-    top: 1107px;
-    left: 394px;
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
+    top: 1100px;
+    left: 417px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
     background-color: #5872A3;
     cursor: pointer;
 }
@@ -268,19 +276,19 @@ section {
 
 #skyblue {
     position: absolute;
-    top: 1023px;
-    left: 163px;
-    width: 46px;
-    height: 46px;
-    border-radius: 23px;
+    top: 953px;
+    left: 165px;
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
     background-color: #C5D6EC;
     cursor: pointer;
 }
 
 #green {
     position: absolute;
-    top: 1092px;
-    left: 209px;
+    top: 1055px;
+    left: 190px;
     width: 112px;
     height: 112px;
     border-radius: 56px;
@@ -288,7 +296,16 @@ section {
     cursor: pointer;
 }
 
-
+#dark_green {
+    position: absolute;
+    top: 1091px;
+    left: 42px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #2B5743;
+    cursor: pointer;
+}
 
 
 /* -------------------------- Footer -------------------------- */

@@ -3,6 +3,10 @@ let springPic1 = document.querySelector('.spring-pic-1');
 let springPic2 = document.querySelector('.spring-pic-2');
 let springPic3 = document.querySelector('.spring-pic-3');
 let springPic4 = document.querySelector('.spring-pic-4');
+let bubbles2 = document.querySelectorAll('.bubble2');
+let architecturePic1 = document.querySelector('.architecture-pic-1');
+let architecturePic2 = document.querySelector('.architecture-pic-2');
+let architecturePic3 = document.querySelector('.architecture-pic-3');
 
 for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].addEventListener('mouseover', function () {
@@ -11,9 +15,11 @@ for (let i = 0; i < bubbles.length; i++) {
         console.log(springPic1.style.backgroundImage);
         springPic2.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 2 + '.png)';
         console.log(springPic2.style.backgroundImage);
+        springPic4.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 4 + '.png)';
+        console.log(springPic2.style.backgroundImage);
         springPic3.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 3 + '.png)';
         console.log(springPic3.style.backgroundImage);
-        if (bubbleId === 'light_blue') {
+        if (bubbleId === 'light_blue' || bubbleId === 'orange') {
             springPic3.style.width = '380px';
             springPic3.style.height = '245px';
             springPic4.style.display = 'none';
