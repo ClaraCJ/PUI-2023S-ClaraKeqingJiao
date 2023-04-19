@@ -41,28 +41,6 @@ for (let i = 0; i < springBubbles.length; i++) {
             bubble.style.borderRadius = size.width / 2 + 'px';
             bubble.style.transform = 'translate(' + size.translateX + 'px, ' + size.translateY + 'px)';
         }
-        let springJournal = document.querySelector('.spring-journal');
-        switch (bubbleId) {
-            case 'light_pink':
-                springJournal.innerHTML = "Having spent six warm, and some would argue hot, years in Hong Kong, I ventured to Pittsburgh to embark on my graduate studies. Though I hail from a northern Chinese city, the cold has always been a source of trepidation for me. The climate in Hong Kong was perfectly suited to my liking, so I couldn't help but feel a bit anxious about the weather in my new home. I had heard rumors that the snow would start falling as early as November, and winter would drag on until April. Fearing the worst, I stocked up on two down jackets, two pairs of winter boots, and an array of hats, gloves, and scarves to see me through the impending winter months.";
-                break;
-            case 'light_blue':
-                springJournal.innerHTML = "No";
-                break;
-            case 'dark_blue':
-                springJournal.innerHTML = "Yet, to my pleasant surprise, the winter in Pittsburgh proved to be far more manageable than I had anticipated. The heating was more than adequate, and spring arrived at lightning speed - with temperatures in the double digits Celsius making a welcome appearance in February and flowers blossoming by mid-March. By the end of the month, the surroundings of Carnegie Mellon University, the University of Pittsburgh, and my neighborhood of Shadyside were bursting with an array of colorful blooms, filling me with elation and joy. I couldn't resist taking pictures every day on my way to school or during my walks, such was the beauty of my surroundings. It was at this moment that I realized the true wonder of the four seasons! Compared to Hong Kong, where the lush greenery reigns all year round, the summer's verdant green, autumn's golden hues, winter's pristine white, and spring's riotous colors in Pittsburgh make one appreciate nature even more and experience the fleeting nature of time.";
-                break;
-            case 'orange':
-                springJournal.innerHTML = 'These orange flowers bring a pop of color to my day!';
-                break;
-            case 'light_purple':
-                springJournal.innerHTML = 'The light purple flowers are so delicate and lovely.';
-                break;
-            default:
-                springJournal.innerHTML = "Having spent six warm, and some would argue hot, years in Hong Kong, I ventured to Pittsburgh to embark on my graduate studies. Though I hail from a northern Chinese city, the cold has always been a source of trepidation for me. The climate in Hong Kong was perfectly suited to my liking, so I couldn't help but feel a bit anxious about the weather in my new home. I had heard rumors that the snow would start falling as early as November, and winter would drag on until April. Fearing the worst, I stocked up on two down jackets, two pairs of winter boots, and an array of hats, gloves, and scarves to see me through the impending winter months.";
-                break;
-        }
-
     });
 
 }

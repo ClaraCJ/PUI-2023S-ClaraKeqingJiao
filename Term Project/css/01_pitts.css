@@ -231,6 +231,13 @@ section {
     height: 528px;
 }
 
+.architecture-pic-1,
+.architecture-pic-2,
+.architecture-pic-3 {
+    transition: all 0.5s ease;
+}
+
+
 .architecture-texts {
     position: absolute;
     top: 1455px;
@@ -263,7 +270,7 @@ section {
     cursor: pointer;
 }
 
-#dark-red {
+#dark_red {
     position: absolute;
     top: 950px;
     left: 274px;
@@ -276,8 +283,8 @@ section {
 
 #skyblue {
     position: absolute;
-    top: 953px;
-    left: 165px;
+    top: 920px;
+    left: 100px;
     width: 26px;
     height: 26px;
     border-radius: 14px;

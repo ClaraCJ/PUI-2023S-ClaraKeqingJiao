@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #5c1715;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* -------------------------- Header -------------------------- */
+header {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo-large {
+    font-size: 64px;
+    margin-left: 60px;
+    margin-top: 4px;
+}
+
+.logo-large img {
+    width: 82px;
+    height: 26px;
+}
+
+.menu {
+    margin-top: 36px;
+    margin-right: 60px;
+}
+
+.nav {
+    margin-left: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.nav:hover {
+    color: white;
+}
+
+.places {
+    color: white;
+}
+
+/* -------------------------- GeoChart Map -------------------------- */
+.geoMap {
+    position: relative;
+}
+
+#regions_div {
+    background-color: #5c1715;
+    opacity: 0.5;
+    width: 1440px;
+    height: 800px;
+    margin: 20px auto
+}
+
+/* ---------------- United States ---------------- */
+.united-states-albums {
+    width: 250px;
+    height: 250px;
+    /* background-color: #fff; */
+    background: url(../images/United\ States\ Albums.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 397px;
+    left: 190px;
+    display: none;
+}
+
+.new-york-city-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 130px;
+    height: 15px;
+    position: absolute;
+    top: 95px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.pittsburgh-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 80px;
+    height: 15px;
+    position: absolute;
+    top: 126px;
+    left: 180px;
+    cursor: pointer;
+}
+
+.boston-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 80px;
+    height: 15px;
+    position: absolute;
+    top: 192px;
+    left: 180px;
+    cursor: pointer;
+}
+
+/* ---------------- China ---------------- */
+.china-albums {
+    width: 250px;
+    height: 370px;
+    /* background-color: #fff; */
+    background: url(../images/China\ Albums.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 100px;
+    right: 240px;
+    display: none;
+}
+
+.hong-kong-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 100px;
+    height: 15px;
+    position: absolute;
+    top: 317px;
+    left: 13px;
+    cursor: pointer;
+}
+
+/* ---------------- Italy ---------------- */
+.italy-albums {
+    width: 200px;
+    height: 160px;
+    /* background-color: #fff; */
+    background: url(../images/Italy\ Albums.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 390px;
+    right: 616px;
+    display: none;
+}
+
+.venice-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 60px;
+    height: 15px;
+    position: absolute;
+    top: 110px;
+    left: 130px;
+    cursor: pointer;
+}
+
+.siena-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 60px;
+    height: 15px;
+    position: absolute;
+    top: 45px;
+    left: 130px;
+    cursor: pointer;
+}
+
+.rome-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 60px;
+    height: 15px;
+    position: absolute;
+    top: 76px;
+    left: 30px;
+    cursor: pointer;
+}
+
+.florence-album {
+    display: inline-block;
+    /* background-color: #fff; */
+    width: 80px;
+    height: 15px;
+    position: absolute;
+    top: 142px;
+    left: 10px;
+    cursor: pointer;
+}
+
+
+/* -------------------------- Footer -------------------------- */
+footer {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: white; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #5c1715;
+}
+
+.texts {
+    font-size: 48px;
+    margin-left: 60px;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #5c1715; */
+}
+
+.external-links {
+    margin-right: 60px;
+    margin-top: 36px;
+}
+
+.link {
+    margin-left: 16px;
+    /* color: rgba(92, 23, 21, 0.6); */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.link:hover {
+    /* color: #5c1715; */
+    color: white;
+}
