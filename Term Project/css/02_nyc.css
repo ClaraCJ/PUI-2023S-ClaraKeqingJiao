@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------- Header -------------------------- */
+header {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #5c1715;
+}
+
+.logo-large {
+    font-size: 64px;
+    margin-left: 60px;
+    margin-top: 4px;
+}
+
+.logo-large img {
+    width: 82px;
+    height: 26px;
+}
+
+.menu {
+    margin-top: 36px;
+    margin-right: 60px;
+}
+
+.nav {
+    margin-left: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.nav:hover {
+    color: white;
+}
+
+/* -------------------------- Main Body -------------------------- */
+
+/* ----- Guggenheim ----- */
+section {
+    position: relative;
+    width: 1200px;
+    height: 2750px;
+    margin: auto;
+}
+
+.title {
+    font-size: 64px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #5c1715;
+}
+
+.guggenheim-pic-1 {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    background: url(../images/nyc_green_1.png);
+    background-size: cover;
+    width: 297px;
+    height: 425px;
+}
+
+.guggenheim-pic-2 {
+    position: absolute;
+    top: 130px;
+    left: 310px;
+    background: url(../images/nyc_green_2.png);
+    background-size: cover;
+    width: 297px;
+    height: 425px;
+}
+
+.guggenheim-pic-3 {
+    position: absolute;
+    top: 566px;
+    right: 138px;
+    background: url(../images/nyc_green_3.png);
+    background-size: cover;
+    width: 207px;
+    height: 105px;
+}
+
+.guggenheim-pic-4 {
+    position: absolute;
+    top: 680px;
+    right: 280px;
+    background: url(../images/nyc_green_4.png);
+    background-size: cover;
+    width: 146px;
+    height: 120px;
+}
+
+.guggenheim-pic-5 {
+    position: absolute;
+    top: 680px;
+    right: 138px;
+    background: url(../images/nyc_green_5.png);
+    background-size: cover;
+    width: 133px;
+    height: 120px;
+}
+
+.guggenheim-pic-6 {
+    position: absolute;
+    top: 419px;
+    right: 0;
+    background: url(../images/nyc_green_6.png);
+    background-size: cover;
+    width: 126px;
+    height: 380px;
+}
+
+.guggenheim-pic-1,
+.guggenheim-pic-2,
+.guggenheim-pic-3,
+.guggenheim-pic-4,
+.guggenheim-pic-5,
+.guggenheim-pic-6 {
+    transition: all 0.5s ease;
+}
+
+
+.guggenheim-texts {
+    position: absolute;
+    width: 585px;
+    top: 565px;
+    left: 20px;
+    color: #5c1715;
+}
+
+.guggenheim-title {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.guggenheim-bubble {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #5c1715;
+    border-radius: 10px;
+}
+
+.guggenheim-journal {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#green {
+    position: absolute;
+    top: 208px;
+    right: 369px;
+    width: 98px;
+    height: 98px;
+    border-radius: 49px;
+    background-color: #CBCAC8;
+    cursor: pointer;
+}
+
+#blue {
+    position: absolute;
+    top: 363px;
+    right: 360px;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: #014A74;
+    cursor: pointer;
+}
+
+#red {
+    position: absolute;
+    top: 508px;
+    right: 436px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #A40000;
+    cursor: pointer;
+}
+
+/* ----- The MET ----- */
+
+.autumn-pic-1 {
+    position: absolute;
+    top: 1750px;
+    right: 380px;
+    background: url(../images/pitts_yellow_1.png);
+    background-size: cover;
+    width: 534px;
+    height: 300px;
+}
+
+.autumn-pic-2 {
+    position: absolute;
+    top: 2070px;
+    right: 380px;
+    background: url(../images/pitts_yellow_2.png);
+    background-size: cover;
+    width: 534px;
+    height: 300px;
+}
+
+.autumn-pic-3 {
+    position: absolute;
+    top: 1750px;
+    right: 0;
+    background: url(../images/pitts_yellow_3.png);
+    background-size: cover;
+    width: 371px;
+    height: 620px;
+}
+
+.autumn-pic-1,
+.autumn-pic-2,
+.autumn-pic-3 {
+    transition: all 0.5s ease;
+}
+
+
+.autumn-texts {
+    position: absolute;
+    top: 2380px;
+    right: 97px;
+    width: 826px;
+    color: #5c1715;
+}
+
+.autumn-title {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.autumn-journal {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#yellow {
+    position: absolute;
+    top: 1860px;
+    left: 110px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    background-color: #FAC057;
+    cursor: pointer;
+}
+
+#brown {
+    position: absolute;
+    top: 1960px;
+    left: 22px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #87715D;
+    cursor: pointer;
+}
+
+#beige {
+    position: absolute;
+    top: 2080px;
+    left: 170px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #E2CEBD;
+    cursor: pointer;
+}
+
+#sora {
+    position: absolute;
+    top: 2165px;
+    left: 90px;
+    width: 78px;
+    height: 78px;
+    border-radius: 39px;
+    background-color: #9EB3CF;
+    cursor: pointer;
+}
+
+#dark_green {
+    position: absolute;
+    top: 1091px;
+    left: 42px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #2B5743;
+    cursor: pointer;
+}
+
+#red {
+    position: absolute;
+    top: 2330px;
+    left: 42px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #940B0A;
+    cursor: pointer;
+}
+
+/* ----- Shadyside Architecture ----- */
+
+.architecture-pic-1 {
+    position: absolute;
+    top: 1250px;
+    left: 20px;
+    background: url(../images/pitts_green_1.png);
+    background-size: cover;
+    width: 213px;
+    height: 323px;
+}
+
+.architecture-pic-2 {
+    position: absolute;
+    top: 1250px;
+    left: 260px;
+    background: url(../images/pitts_green_2.png);
+    background-size: cover;
+    width: 216px;
+    height: 323px;
+}
+
+.architecture-pic-3 {
+    position: absolute;
+    top: 920px;
+    right: 0;
+    background: url(../images/pitts_green_3.png);
+    background-size: cover;
+    width: 640px;
+    height: 528px;
+}
+
+.architecture-pic-1,
+.architecture-pic-2,
+.architecture-pic-3 {
+    transition: all 0.5s ease;
+}
+
+
+.architecture-texts {
+    position: absolute;
+    top: 1455px;
+    right: 30px;
+    width: 530px;
+    color: #5c1715;
+}
+
+.architecture-title {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.architecture-journal {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#navyblue {
+    position: absolute;
+    top: 1100px;
+    left: 417px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: #5872A3;
+    cursor: pointer;
+}
+
+#dark_red {
+    position: absolute;
+    top: 950px;
+    left: 274px;
+    width: 54px;
+    height: 54px;
+    border-radius: 27px;
+    background-color: #A57D80;
+    cursor: pointer;
+}
+
+#skyblue {
+    position: absolute;
+    top: 920px;
+    left: 100px;
+    width: 26px;
+    height: 26px;
+    border-radius: 14px;
+    background-color: #C5D6EC;
+    cursor: pointer;
+}
+
+#green {
+    position: absolute;
+    top: 1055px;
+    left: 190px;
+    width: 112px;
+    height: 112px;
+    border-radius: 56px;
+    background-color: #9DAF5B;
+    cursor: pointer;
+}
+
+#dark_green {
+    position: absolute;
+    top: 1091px;
+    left: 42px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #2B5743;
+    cursor: pointer;
+}
+
+/* -------------------------- Footer -------------------------- */
+footer {
+    width: 100%;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: white; */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #5c1715;
+}
+
+.texts {
+    font-size: 48px;
+    margin-left: 60px;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    /* color: #5c1715; */
+}
+
+.external-links {
+    margin-right: 60px;
+    margin-top: 36px;
+}
+
+.link {
+    margin-left: 16px;
+    /* color: rgba(92, 23, 21, 0.6); */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.link:hover {
+    /* color: #5c1715; */
+    color: white;
+}

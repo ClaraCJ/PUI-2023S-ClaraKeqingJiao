@@ -56,7 +56,7 @@ header {
 section {
     position: relative;
     width: 1200px;
-    height: 1750px;
+    height: 2750px;
     margin: auto;
 }
 
@@ -199,6 +199,132 @@ section {
     cursor: pointer;
 }
 
+/* ----- Yellow Autumn ----- */
+
+.autumn-pic-1 {
+    position: absolute;
+    top: 1750px;
+    right: 380px;
+    background: url(../images/pitts_yellow_1.png);
+    background-size: cover;
+    width: 534px;
+    height: 300px;
+}
+
+.autumn-pic-2 {
+    position: absolute;
+    top: 2070px;
+    right: 380px;
+    background: url(../images/pitts_yellow_2.png);
+    background-size: cover;
+    width: 534px;
+    height: 300px;
+}
+
+.autumn-pic-3 {
+    position: absolute;
+    top: 1750px;
+    right: 0;
+    background: url(../images/pitts_yellow_3.png);
+    background-size: cover;
+    width: 371px;
+    height: 620px;
+}
+
+.autumn-pic-1,
+.autumn-pic-2,
+.autumn-pic-3 {
+    transition: all 0.5s ease;
+}
+
+
+.autumn-texts {
+    position: absolute;
+    top: 2380px;
+    right: 85px;
+    width: 826px;
+    color: #5c1715;
+}
+
+.autumn-title {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.autumn-journal {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#yellow {
+    position: absolute;
+    top: 1860px;
+    left: 110px;
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    background-color: #FAC057;
+    cursor: pointer;
+}
+
+#brown {
+    position: absolute;
+    top: 1960px;
+    left: 22px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #87715D;
+    cursor: pointer;
+}
+
+#beige {
+    position: absolute;
+    top: 2080px;
+    left: 170px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #E2CEBD;
+    cursor: pointer;
+}
+
+#sora {
+    position: absolute;
+    top: 2165px;
+    left: 90px;
+    width: 78px;
+    height: 78px;
+    border-radius: 39px;
+    background-color: #9EB3CF;
+    cursor: pointer;
+}
+
+#dark_green {
+    position: absolute;
+    top: 1091px;
+    left: 42px;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #2B5743;
+    cursor: pointer;
+}
+
+#red {
+    position: absolute;
+    top: 2330px;
+    left: 42px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #940B0A;
+    cursor: pointer;
+}
+
 /* ----- Shadyside Architecture ----- */
 
 .architecture-pic-1 {
@@ -313,7 +439,6 @@ section {
     background-color: #2B5743;
     cursor: pointer;
 }
-
 
 /* -------------------------- Footer -------------------------- */
 footer {
