@@ -62,10 +62,102 @@ for (let i = 0; i < springBubbles.length; i++) {
                 springJournal.innerHTML = "";
                 break;
         }
-
+        tippy('.spring-pic-1', {
+            content: getTippyContent1(bubbleId),
+            animation: 'fade',
+            followCursor: true,
+            interactive: true
+        });
+        tippy('.spring-pic-2', {
+            content: getTippyContent2(bubbleId),
+            animation: 'fade',
+            followCursor: true,
+            interactive: true
+        });
+        tippy('.spring-pic-3', {
+            content: getTippyContent3(bubbleId),
+            animation: 'fade',
+            followCursor: true,
+            interactive: true
+        });
+        tippy('.spring-pic-4', {
+            content: getTippyContent4(bubbleId),
+            animation: 'fade',
+            followCursor: true,
+            interactive: true
+        });
     });
 
 }
+
+function getTippyContent1(bubbleId) {
+    switch (bubbleId) {
+        case 'light_pink':
+            return "Sakura tree at dawn near the UPMC Shadyside.";
+        case 'light_blue':
+            return "The intricate and ancient churches and the fleeting blooms of the flowers contain the ancient themes of life and nature.";
+        case 'dark_blue':
+            return "Sakura tree in Carnegie Mellon University near the tennis court and MMCH building.";
+        case 'orange':
+            return "Sakura tree in front of a kindergarden on Morewood Avenue, near my apartment.";
+        case 'light_purple':
+            return "A beautiful tree in front of the great Cathedral on the Fifth Avenue.";
+        default:
+            return "";
+    }
+}
+
+function getTippyContent2(bubbleId) {
+    switch (bubbleId) {
+        case 'light_pink':
+            return "Sakura tree in front of a red-brick house on Morewood.";
+        case 'light_blue':
+            return "A beautiful tree in front of the great Cathedral on the Fifth Avenue.";
+        case 'dark_blue':
+            return "Sakura tree in Carnegie Mellon University near the tennis court and MMCH building.";
+        case 'orange':
+            return "This is a tree that has just grown its flower bones and is ready to bloom!";
+        case 'light_purple':
+            return "A sweet couple was snapping and chatting under a beautiful blooming cherry tree.";
+        default:
+            return "";
+    }
+}
+
+function getTippyContent3(bubbleId) {
+    switch (bubbleId) {
+        case 'light_pink':
+            return "Sakura tree in Carnegie Mellon University near the tennis court and MMCH building.";
+        case 'light_blue':
+            return "I like this photo so much, even if it was taken actually not in Spring, but in Autumn.";
+        case 'dark_blue':
+            return "I caught a beautiful sunset shining on the lawn and yellow flowers.";
+        case 'orange':
+            return "UPMC Shadyside's Sakura again! Does this photo have a little taste of Japanese anime?";
+        case 'light_purple':
+            return "White flowers and architecture.";
+        default:
+            return "";
+    }
+}
+
+function getTippyContent4(bubbleId) {
+    switch (bubbleId) {
+        case 'light_pink':
+            return "Sakura tree in Carnegie Mellon University near the tennis court and MMCH building.";
+        case 'light_blue':
+            return "";
+        case 'dark_blue':
+            return "Sunsite at Carnegie Mellon University, I was on my way to Barker Hall for PUI lecture.";
+        case 'orange':
+            return "";
+        case 'light_purple':
+            return "White flowers at the entrance of CMU dorm on the Fifth Avenue.";
+        default:
+            return "";
+    }
+}
+
 
 // change the size of bubbles when hovering
 function getBubbleSize(id, hoveredId) {
@@ -249,9 +341,44 @@ function getBubbleSize3(id, hoverId) {
     }
 }
 
-// -------------------- initialize Tippy.js --------------------
-tippy('.spring-pic-1', {
-    content: "Sakura tree at dawn in front of the UPMC Shadyside.",
+// --------------------initialize Tippy.js--------------------
+tippy('.architecture-pic-1', {
+    content: "Architecture on Bayard Road.",
+    animation: 'fade',
+    followCursor: true,
+    interactive: true
+});
+
+tippy('.architecture-pic-2', {
+    content: "Architecture with red fish-scale tile façade in Shadyside.",
+    animation: 'fade',
+    followCursor: true,
+    interactive: true
+});
+
+tippy('.architecture-pic-3', {
+    content: "Architecture with wooden tiles roof in Shadyside.",
+    animation: 'fade',
+    followCursor: true,
+    interactive: true
+});
+
+tippy('.autumn-pic-1', {
+    content: "Yellow autumn trees in Carnegie Mellon University, looking over from CFA over the tennis court towards UC.",
+    animation: 'fade',
+    followCursor: true,
+    interactive: true
+});
+
+tippy('.autumn-pic-2', {
+    content: "Yellow autumn trees on Morewood Avenue in front of my apartment.",
+    animation: 'fade',
+    followCursor: true,
+    interactive: true
+});
+
+tippy('.autumn-pic-3', {
+    content: "Yellow autumn trees on Morewood Avenue in front of my apartment.",
     animation: 'fade',
     followCursor: true,
     interactive: true
