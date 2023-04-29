@@ -54,7 +54,7 @@ li {
 
     .nav {
         margin-left: 16px;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.55);
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 600;
     }
@@ -230,7 +230,7 @@ li {
 
     .nav {
         margin-left: 0.8rem;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.55);
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 600;
         font-size: 1rem;
