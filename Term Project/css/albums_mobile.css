@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     * {
         margin: 0;
         padding: 0;
@@ -101,41 +101,35 @@
         width: 20rem;
         background-repeat: no-repeat;
         background-size: cover;
+        display: block;
     }
 
     .pitts .img-pitts {
         height: 20rem;
-        background-image: url(../images/cover_pitts.png);
     }
 
     .nyc .img-nyc {
         height: 21.3rem;
-        background-image: url(../images/cover_nyc.png);
     }
 
     .hk .img-hk {
         height: 14.84rem;
-        background-image: url(../images/cover_hk.png);
     }
 
     .boston .img-boston {
         height: 22.85rem;
-        background-image: url(../images/cover_boston.png);
     }
 
     .barcelona .img-barcelona {
         height: 25.49rem;
-        background-image: url(../images/cover_barcelona.png);
     }
 
     .paris .img-paris {
         height: 26.11rem;
-        background-image: url(../images/cover_paris.png);
     }
 
     .italy .img-italy {
         height: 20rem;
-        background-image: url(../images/cover_italy.png);
     }
 
     .pitts:hover,
