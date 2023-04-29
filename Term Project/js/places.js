@@ -5,7 +5,7 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 
 function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable([
-        ['Country', 'Cities'],
+        ['Country', 'Cities Visited'],
         ['France', 1],
         ['United States', 5],
         ['Italy', 4],
