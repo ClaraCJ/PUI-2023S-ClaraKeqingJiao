@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     * {
         margin: 0;
         padding: 0;
@@ -18,7 +18,6 @@
         text-decoration: none;
     }
 
-
     /* -------------------- Header -------------------- */
     header {
         width: 100%;
@@ -30,8 +29,9 @@
     }
 
     .logo-large {
-        margin-top: 0.75rem;
-        margin-left: 2rem;
+        font-size: 2rem;
+        margin-left: 1.5rem;
+        margin-top: 0.3rem;
     }
 
     .logo-large img {
@@ -56,7 +56,7 @@
         color: white;
     }
 
-    .about {
+    .albums {
         color: white;
     }
 
@@ -74,8 +74,8 @@
     }
 
     .my-photo {
-        width: 30rem;
-        height: 40.11rem;
+        width: 24rem;
+        height: 32rem;
         opacity: 0.8;
         background-color: #fff;
         background: url(../images/about_green.png);
@@ -86,8 +86,8 @@
     }
 
     .my-personality {
-        width: 60rem;
-        font-size: 4rem;
+        width: 24rem;
+        font-size: 3rem;
         transition: all 0.5s ease;
         align-self: center;
         margin-top: 2rem;
@@ -97,10 +97,11 @@
 
     .my-selfintro {
         margin-top: 5rem;
-        width: 55rem;
+        width: 24rem;
         opacity: 0.8;
         margin-left: 4rem;
         margin-bottom: 6rem;
+        align-self: center;
     }
 
     .my-selfintro p {
@@ -112,7 +113,7 @@
 
     .bubbles {
         flex-direction: row;
-        width: 35rem;
+        width: 40rem;
         justify-content: space-evenly;
         margin: 2.5rem auto;
     }
@@ -169,38 +170,34 @@
     /* -------------------------- Footer -------------------------- */
     footer {
         width: 100%;
-        height: 10rem;
+        height: 5rem;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        /* background-color: white; */
-        border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     .texts {
-        font-size: 3.2rem;
-        margin-left: 6rem;
-        margin-top: 2.8rem;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
         color: rgba(255, 255, 255, 0.8);
-        /* color: #5c1715; */
     }
 
     .external-links {
-        margin-right: 6rem;
-        margin-top: 3.6rem;
+        margin-right: 1.5rem;
+        margin-top: 1.2rem;
     }
 
     .link {
-        margin-left: 1.6rem;
-        /* color: rgba(92, 23, 21, 0.6); */
+        margin-left: 1rem;
         color: rgba(255, 255, 255, 0.5);
         font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
         font-weight: 600;
-        font-size: 1.6rem;
     }
 
     .link:hover {
-        /* color: #5c1715; */
         color: white;
     }
 
