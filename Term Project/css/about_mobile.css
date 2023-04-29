@@ -1,22 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #5c1715;
+}
+
+a {
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
-    * {
-        margin: 0;
-        padding: 0;
-        color: white;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-
-    html {
-        font-size: 62.5%;
-    }
-
-    body {
-        background-color: #5c1715;
-    }
-
-    a {
-        text-decoration: none;
-    }
 
     /* -------------------- Header -------------------- */
     header {
