@@ -8,13 +8,13 @@ let springPic4 = document.querySelector('.spring-pic-4');
 for (let i = 0; i < springBubbles.length; i++) {
     springBubbles[i].addEventListener('mouseover', function () {
         let bubbleId = this.id;
-        springPic1.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 1 + '.png)';
+        springPic1.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 1 + '.png)';
         console.log(springPic1.style.backgroundImage);
-        springPic2.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 2 + '.png)';
+        springPic2.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 2 + '.png)';
         console.log(springPic2.style.backgroundImage);
-        springPic4.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 4 + '.png)';
+        springPic4.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 4 + '.png)';
         console.log(springPic2.style.backgroundImage);
-        springPic3.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 3 + '.png)';
+        springPic3.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 3 + '.png)';
         console.log(springPic3.style.backgroundImage);
         if (bubbleId === 'light_blue' || bubbleId === 'orange') {
             springPic3.style.width = '380px';
@@ -188,11 +188,11 @@ let architectureJournal = document.querySelector('.architecture-journal');
 for (let i = 0; i < architectureBubbles.length; i++) {
     architectureBubbles[i].addEventListener('mouseover', function () {
         let bubbleId = this.id;
-        architecturePic1.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 1 + '.png)';
+        architecturePic1.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 1 + '.png)';
         console.log(architecturePic1.style.backgroundImage);
-        architecturePic2.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 2 + '.png)';
+        architecturePic2.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 2 + '.png)';
         console.log(architecturePic2.style.backgroundImage);
-        architecturePic3.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 3 + '.png)';
+        architecturePic3.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 3 + '.png)';
 
         if (bubbleId === 'dark_red') {
             architecturePic1.style.width = '574px';
@@ -276,9 +276,9 @@ let autumnJournal = document.querySelector('.autumn-journal');
 for (let i = 0; i < autumnBubbles.length; i++) {
     autumnBubbles[i].addEventListener('mouseover', function () {
         let bubbleId = this.id;
-        autumnPic1.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 1 + '.png)';
-        autumnPic2.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 2 + '.png)';
-        autumnPic3.style.backgroundImage = 'url(images/pitts_' + bubbleId + '_' + 3 + '.png)';
+        autumnPic1.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 1 + '.png)';
+        autumnPic2.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 2 + '.png)';
+        autumnPic3.style.backgroundImage = 'url(../images/pitts_' + bubbleId + '_' + 3 + '.png)';
 
         if (bubbleId === 'beige') {
             autumnPic1.style.width = '420px';

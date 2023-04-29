@@ -4,4 +4,4 @@ Deployed website: https://claracj.github.io/PUI-2023S-ClaraKeqingJiao/index.html
 
 Final project demo video: 
 
-PDF Write-up: 
+PDF Write-up: Term Project/Final Project Write-up_ClaraJiao .pdf
