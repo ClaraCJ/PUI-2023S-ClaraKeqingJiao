@@ -68,6 +68,12 @@ header {
     position: relative;
 }
 
+.title {
+    font-weight: 400;
+    margin: 10px 60px;
+    display: block;
+}
+
 #regions_div {
     background-color: #5c1715;
     opacity: 0.5;
