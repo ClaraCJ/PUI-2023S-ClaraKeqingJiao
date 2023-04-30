@@ -5,7 +5,7 @@ let mypersonality = document.querySelector('.my-personality');
 for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].addEventListener('mouseover', function () {
         let bubbleId = this.id;
-        myphoto.style.backgroundImage = 'url(images/about_' + bubbleId + '.png)';
+        myphoto.style.backgroundImage = 'url(../images/about_' + bubbleId + '.png)';
         mypersonality.innerHTML = getPersonalityText(bubbleId);
 
         for (let j = 0; j < bubbles.length; j++) {
