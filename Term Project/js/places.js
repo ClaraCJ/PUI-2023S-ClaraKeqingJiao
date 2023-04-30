@@ -5,14 +5,14 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 
 function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable([
-        ['Country', 'Cities Visited'],
+        ['Country', 'Cities'],
         ['France', 1],
         ['United States', 5],
         ['Italy', 4],
         ['Spain', 1],
         ['Portugal', 1],
         ['China', 12],
-        ['Taiwan', 1]
+        ['Taiwan', 3]
     ]);
 
     var options = {
