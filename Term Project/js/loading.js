@@ -36,7 +36,7 @@ update();
 
 // Animate the progress bar to 100% width over the specified duration
 function animateProgressBar() {
-    progressBar.style.width = '100%';
+    progressBar.style.width = '98.5%';
 }
 
 // Redirect to the main page after the animation finishes
